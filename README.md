@@ -1,96 +1,52 @@
-Nicolas Olcan
+# Nicolas Olcan
 
 Cybersecurity Graduate | SOC Analyst Path | Python & Security Projects
 
-About Me:
-Applied Computing graduate specializing in Cybersecurity with hands-on experience in IT, software development, and security-focused projects.
-I’m focused on building practical blue-team skills through real-world simulations, detection engineering, and security automation.
+## About Me
 
-Skills
+Applied Computing graduate specializing in Cybersecurity, with hands-on experience in IT, software development, and backend security work. Building toward blue-team / detection engineering roles through real, working projects rather than tutorials.
 
-Languages & Tools
+## Skills
 
-Python
-SQL
-Bash / Linux
-Git & GitHub
-Flask
+**Languages & Tools**
+Python · SQL · Bash / Linux · Git & GitHub · Flask · FastAPI
 
-Cybersecurity
+**Cybersecurity**
+Password/credential hashing (bcrypt) · JWT & OAuth2 auth flows · Signed/expiring URL schemes · Threat-model reasoning (see project write-ups below) · Studying for Security+
 
-Log Analysis
-SIEM Concepts
-MITRE ATT&CK Mapping
-Threat Detection
-Incident Response Basics
+**Platforms**
+Linux (Pop!_OS, Arch) · Windows · Virtualization (VirtualBox / QEMU)
 
-Platforms
+## Featured Projects
 
-Linux (Pop!_OS, Arch)
-Windows
-Virtualization (VirtualBox / QEMU)
-Featured Projects
-Simulated Bank SOC Lab
+**[Secure HLS Video Delivery](https://github.com/golmannic/secure-hls-demo)**
+Flask app issuing short-lived, asset-specific signed URLs (via `itsdangerous`) for HLS video streaming, with an Nginx `secure_link` config for production-style hotlink protection. Documents its own threat model, including what it *doesn't* stop (screen recording, determined reverse engineering) — one signing layer isn't a silver bullet.
+*Key skills: backend security, content protection, token design*
 
-Goal: Detect and respond to real-world attack scenarios
+**[Phishing URL Risk Scorer](https://github.com/golmannic/phishing-detector)**
+Rule-based CLI tool that extracts phishing signals from a URL (raw IPs, `@` obfuscation, suspicious TLDs/keywords, URL shorteners, subdomain abuse) and produces a weighted 0–100 risk score with reasoning. Built as a foundation for a future ML-based classifier — the feature extraction is already shaped for that.
+*Key skills: threat heuristics, Python, security tooling*
 
-Detected brute force login attempts
-Identified PowerShell abuse activity
-Mapped techniques to MITRE ATT&CK
-Wrote executive-level incident report
+**Website Security Monitoring Service** *(business project)*
+Recurring cybersecurity service for small businesses: uptime monitoring with automated alerts, WordPress plugin/vulnerability management, and security patching workflows on a subscription model ($50–$300/month).
+*Key skills: security operations, automation, business strategy*
 
-Key Skills: SIEM, Detection, Threat Analysis
+**[Local Manual RAG Pipeline](https://github.com/golmannic/my-rag)** *(AI engineering, not security)*
+Fully local RAG pipeline (Docling + Chroma + Ollama) for parsing PDF manuals and answering questions against them, with layout-aware chunking so spec tables survive intact. No API keys, nothing leaves the machine.
+*Key skills: applied AI, local-first architecture, Python*
 
-Website Security Monitoring Service (Business Project)
+**[JWT Auth & Scoped Access Control](https://github.com/golmannic/Authentication-Practice)**
+FastAPI service implementing OAuth2 password-flow login, bcrypt password hashing, and scope-based route protection (admin vs. student access).
+*Key skills: authentication, access control*
 
-Goal: Build a recurring cybersecurity service for small businesses
+## Experience
 
-Uptime monitoring with automated alerts
-Plugin & vulnerability management (WordPress)
-Security patching and maintenance workflows
-Subscription-based model ($50–$300/month)
+**Junior Software Development Intern** — Educational Options Foundation AZ (2026–Present)
+Supported IT and software development operations; built structured educational programs; integrated AI tools into classroom workflows.
 
-Key Skills: Security Operations, Automation, Business Strategy
+**Sales Advisor** — Apple / Tesla
+Delivered customer-focused technical solutions; built strong communication and troubleshooting skills.
 
-Secure Video Delivery Prototype
+## Current Focus
 
-Goal: Prevent unauthorized access to hosted content
-
-Implemented token-based video access (Flask)
-Explored HLS streaming and encryption
-Designed one-time signed URLs
-
-Key Skills: Backend Security, Content Protection
-
-MITRE ATT&CK Visualizer
-
-Goal: Map detected threats to standardized frameworks
-
-Visualized attack techniques
-Linked logs to ATT&CK tactics
-Built for SOC-style reporting
-
-Key Skills: Threat Intelligence, Visualization
-
-Experience:
-
-Junior Software Development Intern
-
-Educational Options Foundation AZ (2026 – Present)
-
-Supported IT and software development operations
-Built structured educational programs
-Integrated AI tools into classroom workflows
-
-Sales Advisor
-
-Apple / Tesla
-
-Delivered customer-focused technical solutions
-Built strong communication and troubleshooting skills
-
-Current Focus:
-
-Building SOC-level detection labs
-Improving log analysis & threat detection
-Preparing for Security+ and advanced certifications
+Building a real log-analysis / detection lab (working with actual sample logs and MITRE ATT&CK mapping — no shortcuts) to back up blue-team skills claims with working code, and preparing for Security+.
